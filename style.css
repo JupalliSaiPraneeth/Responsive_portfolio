@@ -573,6 +573,18 @@ height: 23vh;
 .skills__ux{
     width: 75%;
 }
+.skills__RS{
+    width: 58%;
+}
+.skills__TC{
+    width: 54%;
+}
+.skills__MD{
+    width: 68%;
+}
+.skills__PG{
+    width: 71%;
+}
 
 /* ---------------projects */
 .project__container{
