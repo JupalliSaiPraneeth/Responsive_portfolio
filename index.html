@@ -1,430 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SaiPraneeth | Portfolio</title>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
-    <title>Portfolio website </title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="l-header">
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Noise overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Header -->
+    <header class="l-header" id="header">
         <nav class="nav bd-grid">
-            <div class="port">
-                <a href="#" class="nav__logo">PRANEETH Portfolio</a>
-                <h1 class="underline">------------</h1>
+            <div class="nav__brand">
+                <a href="#home" class="nav__logo">
+                    <!-- <span class="logo-bracket"></span><span class="logo-bracket">PRANEETH</span> -->
+                </a>
             </div>
-            
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#Skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#home"     class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about"    class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#Skills"   class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#contact"  class="nav__link">Contact</a></li>
                 </ul>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="bxr  bx-menu-select"></i>
 
-            </div>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
-    <div class="bars-animation">
-        <div class="bar" style="--i:6"></div>
-        <div class="bar" style="--i:5"></div>
-        <div class="bar" style="--i:4"></div>
-        <div class="bar" style="--i:3"></div>
-        <div class="bar" style="--i:2"></div>
-        <div class="bar" style="--i:1"></div>
 
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- ═══ HOME ═══ -->
     <main class="l-main">
         <section class="home__page" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi, <br>I'am <span class="home__title-color"
-                        style="--i:4 "; data-text= "SaiPraneeth">SaiPraneeth</span><br>
-                        <span class="role" style="--i:3 "; data-text= "Frontend Developer">Frontend Developer</span>
-                        <span class="role" style="--i:2 "; data-text= "Data Scientist">Data Scientist</span>
-                        <span class="role" style="--i:1 "; data-text= "Web Designer">Web Designer</span>
+            <!-- Background grid lines -->
+            <div class="home__bg-grid"></div>
+
+            <div class="home__data" data-reveal>
+                <p class="home__greeting">Hey there , I'm</p>
+                <h1 class="home__title">
+                    <span class="home__name" id="typed-name"></span><span class="typed-cursor-custom">|</span>
                 </h1>
-                <a href="#contact" class="button" class="home_button">Contact</a>
+                <div class="home__roles">
+                    <span class="role-static">I'm a&nbsp;</span>
+                    <div class="roles-wrapper">
+                        <span class="role-item" data-text="Full-stack Developer">Frontend Developer</span>
+                        <span class="role-item" data-text="Data Scientist">Data Scientist</span>
+                        <span class="role-item" data-text="UI/UX Designer">Web Designer</span>
+                    </div>
+                </div>
+                <p class="home__desc">Crafting immersive digital experiences with clean code &amp; creative thinking.</p>
+
+                <div class="home__actions">
+                    <a href="#contact" class="btn btn--primary">
+                        <span>Let's Talk</span>
+                        <i class="bx bx-send"></i>
+                    </a>
+                    <a href="#projects" class="btn btn--ghost">
+                        <span>View Work</span>
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </div>
+
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="home__social-icon"><i
-                            class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/JupalliSaiPraneeth" class="home__social-icon"><i
-                            class="bx bxl-github"></i></a>
-                    <a href="https://www.instagram.com/devil_praneeth/" class="home__social-icon"><i
-                            class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/JupalliSaiPraneeth" class="social-icon" target="_blank" aria-label="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devil_praneeth/" class="social-icon" target="_blank" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="home__img">
-                <div class="img_box">
-                    <div class="img_item">
-                        <img src="updated_bqtf5y_e_background_removal_f_png.png" alt="">
+            <div class="home__img" data-reveal data-delay="200">
+                <div class="img-ring">
+                    <div class="img-ring__inner">
+                        <img src="updated_bqtf5y_e_background_removal_f_png.png" alt="SaiPraneeth">
                     </div>
+                    <div class="img-ring__orbit"></div>
+                    <div class="img-ring__dot"></div>
                 </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span class="scroll-line"></span>
+                <span class="scroll-text">scroll</span>
             </div>
         </section>
 
+        <!-- ═══ ABOUT ═══ -->
         <section class="about section" id="about">
-            <h2 class="section-title">About</h2>
+            <div class="section-header" data-reveal>
+                <span class="section-tag">02.</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
 
             <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="pt65.jpg" alt="">
+                <div class="about__img-wrap" data-reveal>
+                    <div class="about__img-frame">
+                        <img src="pt65.jpg" alt="SaiPraneeth">
+                        <div class="about__img-deco"></div>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="about__subtitle">I'am SaiPraneeth</h2>
-                    <p class="about__text">A passionate B.Tech 3rd-year student with a solid foundation in front-end
-                        web development and data science. I have hands-on experience with HTML, CSS, and Python, along
-                        with a strong understanding of data visualization and machine learning. Currently, I’m expanding
-                        my skill set by learning JavaScript and ReactJS to build dynamic and interactive web
-                        applications.</p>
+                <div class="about__content" data-reveal data-delay="100">
+                    <h3 class="about__subtitle">I'm SaiPraneeth <span class="accent">Jupalli</span></h3>
+                    <p class="about__text">A passionate B.Tech 3rd-year student with a solid foundation in front-end web development and data science. I have hands-on experience with HTML, CSS, and Python, along with a strong understanding of data visualization and machine learning.</p>
+                    <p class="about__text">Currently expanding my skill set by learning JavaScript and ReactJS to build dynamic and interactive web applications.</p>
+                    <div class="about__stats">
+                        <div class="stat-card">
+                            <span class="stat-num">9+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">3rd</span>
+                            <span class="stat-label">B.Tech Year</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Domains</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ═══ SKILLS ═══ -->
         <section class="skill section" id="Skills">
-            <h2 class="section-title">Skills</h2>
+            <div class="section-header" data-reveal>
+                <span class="section-tag">03.</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+
             <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitile">Professional skills</h2>
-                    <p class="skills__text">I am a B.Tech 3rd-year student with a strong foundation in web development
-                        and data science. I have hands-on experience in HTML and CSS for creating responsive and
-                        visually appealing websites, and I’m well-versed in Python programming, including concepts like
-                        data structures and object-oriented programming. I have also worked on data visualization using
-                        libraries like Matplotlib, Seaborn, and Plotly to turn complex data into meaningful insights. My
-                        knowledge of machine learning includes algorithms such as linear regression, decision trees, and
-                        KNN, using tools like Scikit-learn and Pandas. Currently, I am learning JavaScript to add
-                        dynamic behavior to web pages and exploring ReactJS to build modern, component-based web
-                        applications. </p>
+                <div class="skills__info" data-reveal>
+                    <h3 class="skills__subtitle">Professional Skills</h3>
+                    <p class="skills__text">From pixel-perfect frontends to intelligent data pipelines — here's what I bring to the table.</p>
+                </div>
 
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="bx bxl-html5 skills__icon"></i>
-                            <span class="skills__name">HTML5</span>
+                <div class="skills__bars" data-reveal data-delay="100">
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-html5"></i> HTML5</div>
+                            <span class="skill-pct">78%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">78%</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
                     </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="bx bxl-css3 skills__icon"></i>
-                            <span class="skills__name">CSS3</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-css3"></i> CSS3</div>
+                            <span class="skill-pct">60%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">60%</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
                     </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="bx bxl-javascript skills__icon"></i>
-                            <span class="skills__name">JavaScript</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-javascript"></i> JavaScript</div>
+                            <span class="skill-pct">48%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">48%</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="48"></div></div>
                     </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="bx bxl-javascript skills__icon"></i> -->
-                            <span class="skills__name">MACHINE LEARNNING</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-python"></i> Python / ML</div>
+                            <span class="skill-pct">67%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">67%</span>
-                        </div>
-                        <div class="skills__bar skills__ml">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="67"></div></div>
                     </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="fa-solid fa-circle-user skills__icon"></i> -->
-                            <span class="skills__name">EDA</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-data"></i> Data Science</div>
+                            <span class="skill-pct">75%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
                     </div>
-
-                    
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-brands fa-react skills__icon"></i>
-                           
-                            <span class="skills__name">React</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-palette"></i> UI/UX Design</div>
+                            <span class="skill-pct">58%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">58%</span>
-                        </div>
-                        <div class="skills__bar skills__RS">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="58"></div></div>
                     </div>
-
-                     <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="fa-brands fa-react skills__icon"></i> -->
-                           
-                            <span class="skills__name">Tailwind CSS</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-postgresql"></i> SQL / DB</div>
+                            <span class="skill-pct">71%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">54%</span>
-                        </div>
-                        <div class="skills__bar skills__TC">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="71"></div></div>
                     </div>
-
-                     <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="fa-brands fa-react skills__icon"></i> -->
-                           
-                            <span class="skills__name">MangoDB</span>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-github"></i> Git</div>
+                            <span class="skill-pct">54%</span>
                         </div>
-                        <div>
-                            <span class="skills__percentage">68%</span>
-                        </div>
-                        <div class="skills__bar skills__MD">
-
-                        </div>
-
+                        <div class="skill-track"><div class="skill-fill" data-width="54"></div></div>
                     </div>
+                </div>
 
-                     <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class="fa-brands fa-react skills__icon"></i> -->
-                           
-                            <span class="skills__name">PostgreSQL</span>
-                        </div>
-                        <div>
-                            <span class="skills__percentage">71%</span>
-                        </div>
-                        <div class="skills__bar skills__PG">
-
-                        </div>
-
-                    </div>
-
-
-
+                <!-- Tech pills -->
+                <div class="skills__pills" data-reveal data-delay="200">
+                    <span class="pill">React</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">Scikit-learn</span>
+                    <span class="pill">Pandas</span>
+                    <span class="pill">Matplotlib</span>
+                    <span class="pill">MongoDB</span>
+                    <span class="pill">Socket.IO</span>
+                    <span class="pill">Express</span>
+                    <span class="pill">Seaborn</span>
+                    <span class="pill">Plotly</span>
+                    <span class="pill">TailwindCSS</span>
+                    <span class="pill">NumPy</span>
                 </div>
             </div>
         </section>
+
+        <!-- ═══ PROJECTS ═══ -->
         <section class="projects section" id="projects">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header" data-reveal>
+                <span class="section-tag">04.</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
 
             <div class="project__container bd-grid">
-                
-                <div class="project__img" id="id_1" src="https://github.com/JupalliSaiPraneeth/Fast-and-Curious-A-Car-Price-ML-Model">
-                    <a href="https://github.com/JupalliSaiPraneeth/Fast-and-Curious-A-Car-Price-ML-Model"><img
-                    class="reg_img"        src="Linear-Regression-vs-Polynomial-Regression_new.jpg" alt="regression"></a>
-                    <div class="matter">
-                        <h2>Fast and Curious A Car Price ML Model</h2>
-                        <p>Machine Learning Regression, and what a ride it’s been!
-                            It all began with a simple dataset… but as I dived in, I realized how much hidden insight
-                            lies
-                            beneath the surface. From handling missing values and outliers to exploring the
-                            relationships
-                            between variables, every step challenged me to think critically and creatively.
-                        </p>
+
+                <a href="https://github.com/JupalliSaiPraneeth/-The-Art-of-Clustering-From-Chaos-to-Clarity-" target="_blank" class="project-card" data-reveal>
+                    <div class="project-card__img">
+                        <img src="clustering.jpeg" alt="Clustering">
+                        <div class="project-card__overlay">
+                            <i class="bx bx-link-external"></i>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="project__img" id="cl" src="https://github.com/JupalliSaiPraneeth/-ClassiFi-A-Stylish-Dive-into-ML-Classification-Models-">
-                    <a
-                        href="https://github.com/JupalliSaiPraneeth/-ClassiFi-A-Stylish-Dive-into-ML-Classification-Models-"><img
-                    class="cls_img"       src="classification.png" alt="classification"></a>
-                    <div class="matter">
-                        <h2>"ClassiFi: A Stylish Dive into ML Classification Models"</h2>
-                        <p>This project provides a hands-on comparison of several foundational classification algorithms
-                            using a consistent dataset and evaluation metrics. It is intended for beginners who are
-                            exploring the behavior and performance of algorithms such as KNN, Naive Bayes, SVM, Decision
-                            Trees, and Random Forests.</p>
+                    <div class="project-card__body">
+                        <span class="project-tag">Machine Learning</span>
+                        <h3 class="project-title">The Art of Clustering</h3>
+                        <p class="project-desc">Uncovering invisible patterns using unsupervised ML — clustering humans based on behavior without being told how.</p>
                     </div>
-                </div>
-                
-                <div class="project__img" id="clu" src="https://github.com/JupalliSaiPraneeth/-The-Art-of-Clustering-From-Chaos-to-Clarity-">
-                    <a href="https://github.com/JupalliSaiPraneeth/-The-Art-of-Clustering-From-Chaos-to-Clarity-"><img
-                      class="clu_img"      src="clustering.jpeg" alt="clustering"></a>
-                    <div class="matter">
-                        <h2>"The Art of Clustering From Chaos to Clarity"</h2>
-                        <p> it’s all about uncovering invisible patterns using the magic of Clustering!
-                            This was more than just a coding task — it was a deep dive into how machines group humans
-                            based on behavior, all without being told how. Yep, this is unsupervised learning at work —
-                            and it blew my mind! </p>
+                </a>
+
+                <a href="https://github.com/JupalliSaiPraneeth/-Beyond-the-Basket-A-Deep-Dive-into-Association-Rule-Mining-" target="_blank" class="project-card" data-reveal data-delay="50">
+                    <div class="project-card__img">
+                        <img src="Association_rule_mining.jpg" alt="Association Rule Mining">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
                     </div>
-                </div>
-                
-                <div class="project__img" id="ass" src="https://github.com/JupalliSaiPraneeth/-Beyond-the-Basket-A-Deep-Dive-into-Association-Rule-Mining-">
-                    <a
-                        href="https://github.com/JupalliSaiPraneeth/-Beyond-the-Basket-A-Deep-Dive-into-Association-Rule-Mining-"><img
-                     class="ass_img"       src="Association_rule_mining.jpg" alt="association"></a>
-                    <div class="matter">
-                        <h2>💡 "Beyond the Basket: A Deep Dive into Association Rule Mining"</h2>
-                        <p>Association Rule Mining is widely used in market basket analysis, recommender systems, and
-                            behavioral analytics. This project helps understand how products or services are
-                            interconnected, valuable for business strategy, marketing, and e-commerce optimization.</p>
+                    <div class="project-card__body">
+                        <span class="project-tag">Data Mining</span>
+                        <h3 class="project-title">Beyond the Basket</h3>
+                        <p class="project-desc">Association Rule Mining for market basket analysis, recommender systems, and behavioral analytics.</p>
                     </div>
-                </div>
-                
-                <div class="project__img" id="L1" src="https://www.linkedin.com/feed/update/urn:li:activity:7344949477444616192/">
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7344949477444616192/"><img
-                        class="L1_img"    src="Screenshot 2025-06-29 101226.png" alt=""></a>
-                    <div class="matter">
-                        <h2>My first Landing Page</h2>
-                        <p>Embarking on my web development journey felt like stepping into a new dimension — lines of
-                            code turning into visuals, and logic breathing life into pixels. I’ve just completed my
-                            first real-world task: crafting a fully responsive and visually engaging Landing Page from
-                            scratch!
-                            From sketching ideas to structuring HTML, styling with CSS, and refining every pixel for a
-                            perfect look — it was a thrilling ride through the world of frontend magic.</p>
+                </a>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7344949477444616192/" target="_blank" class="project-card" data-reveal data-delay="100">
+                    <div class="project-card__img">
+                        <img src="Screenshot 2025-06-29 101226.png" alt="Landing Page">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
                     </div>
-                </div>
-                
-              
-                
-                <div class="project__img" id="L3" src="https://www.linkedin.com/feed/update/urn:li:activity:7356141841919946752/">
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356141841919946752/"><img
-                         class="L3_img"   src="Screenshot 2025-07-30 065259.png" alt=""></a>
-                    <div class="matter">
-                        <h2>Mini Pro</h2>
-                        <p>This is my newly designed scrolled animation. It was a known template, but I have given my
-                            best to attract people with my basic animation effect. Also, I'm flexing some mini programs:
-                            ->Master Dice.
-                            ->Security-Pin.
-                            ->Lucky-Shot.</p>
+                    <div class="project-card__body">
+                        <span class="project-tag">Frontend</span>
+                        <h3 class="project-title">My First Landing Page</h3>
+                        <p class="project-desc">A fully responsive and visually engaging landing page — from sketch to pixel-perfect HTML/CSS implementation.</p>
                     </div>
-                </div>
-                 <div class="project__img" id="" src="https://lnkd.in/drwJieXU">
-                    <a href="https://lnkd.in/drwJieXU"><img
-                         class="man-img"   src="manny.png" alt="Manny-s-store"></a>
-                    <div class="matter">
-                        <h2>Only Here</h2>
-                        <p>Recently, I noticed many people are reading stories, so I have bought you my new story website.
-Actually, my friend was the writer of these stories. He becomes my first client in this field. There is a mutual benefit behind this work. That was, his stories are reaching the people through this website, and I want the people to know my work.</p>
+                </a>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356141841919946752/" target="_blank" class="project-card" data-reveal data-delay="150">
+                    <div class="project-card__img">
+                        <img src="Screenshot 2025-07-30 065259.png" alt="Mini Pro">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
                     </div>
-                </div>
-                 <div class="project__img" id="" src="https://lnkd.in/dFZgQ4Hu">
-                    <a href="https://lnkd.in/dFZgQ4Hu"><img
-                         class="fest-img"   src="fest.png" alt="festival"></a>
-                    <div class="matter">
-                        <h2>MarKDowN_FestivaL</h2>
-                        <p>It has taken a bit longer after flexing my last post. Now I would like to showcase my new Pro! which attracts the people who are eagerly waiting for holidays.</p>
+                    <div class="project-card__body">
+                        <span class="project-tag">Animation</span>
+                        <h3 class="project-title">Mini Pro</h3>
+                        <p class="project-desc">Scroll animations with mini programs: Master Dice, Security-Pin, and Lucky-Shot bundled together.</p>
                     </div>
-                </div>
-                    <div class="project__img" id="" src="https://www.linkedin.com/feed/update/urn:li:activity:7374681733188800512/">
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7374681733188800512/"><img
-                    class="ush-img"        src="mega.png" alt="usha-store"></a>
-                    <div class="matter" id="">
-                        <h2>Usha Store</h2>
-                        <p>After some days of hard work, dedication, and countless debugging sessions, I’m proud to share my Full-Stack E-Commerce Website project! 
-This wasn’t just about writing code – it was about learning, solving problems, and pushing myself beyond my comfort zone. From building secure authentication, managing cart & favourites, to making the site fully responsive across all devices, every feature was a result of persistence and late-night effort.</p>
+                </a>
+
+                <a href="https://lnkd.in/drwJieXU" target="_blank" class="project-card" data-reveal data-delay="200">
+                    <div class="project-card__img">
+                        <img src="manny.png" alt="Only Here">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
                     </div>
-                </div>
-                <div class="project__img" id="" src="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_hey-developers-hope-you-gonna-make-your-activity-7409835234202120192-SeT6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyraBUBkT683CpdYO0yy3ISUBxYotRgkRI">
-                    <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_hey-developers-hope-you-gonna-make-your-activity-7409835234202120192-SeT6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyraBUBkT683CpdYO0yy3ISUBxYotRgkRI"><img
-                    class="res-img"        src="resume.png" alt="Resume"></a>
-                    <div class="matter" id="">
-                        <h2>Carrier Builder</h2>
-                        <p>Fresh graduate engineers deserve better resumes.
-I built a Resume Builder made for freshers — simple, professional, and ATS-friendly.It helps create clean, structured, and recruiter-friendly resumes in minutes.
-Helping students turn skills and projects into opportunities.</p>
+                    <div class="project-card__body">
+                        <span class="project-tag">Web Design</span>
+                        <h3 class="project-title">Only Here</h3>
+                        <p class="project-desc">A story website built for a writer friend — bridging storytelling and the web through thoughtful design.</p>
                     </div>
-                </div>
-                <div class="project__img" id="" src="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_webdevelopment-activity-7382818932988121089-Jg-m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyraBUBkT683CpdYO0yy3ISUBxYotRgkRI">
-                    <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_webdevelopment-activity-7382818932988121089-Jg-m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyraBUBkT683CpdYO0yy3ISUBxYotRgkRI"><img
-                    class="chat-img"        src="chat.png" alt="chat"></a>
-                    <div class="matter" id="">
-                        <h2>Chat_Burst</h2>
-                        <p>Developed a full-stack real-time chat application with authentication, instant messaging, and live read receipts.
- Built using React, Node.js, Express, MongoDB, and Socket.IO, the app enables seamless communication between users with features like message delivery & seen status, file sharing, and a responsive UI for both desktop and mobile.</p>
+                </a>
+
+                <a href="https://lnkd.in/dFZgQ4Hu" target="_blank" class="project-card" data-reveal data-delay="250">
+                    <div class="project-card__img">
+                        <img src="fest.png" alt="Festival">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
                     </div>
-                </div>
+                    <div class="project-card__body">
+                        <span class="project-tag">Frontend</span>
+                        <h3 class="project-title">MarKDowN FestivaL</h3>
+                        <p class="project-desc">A festive-themed webpage designed to attract holiday enthusiasts with vibrant, engaging visuals.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7374681733188800512/" target="_blank" class="project-card" data-reveal data-delay="300">
+                    <div class="project-card__img">
+                        <img src="mega.png" alt="Usha Store">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-tag">Full Stack</span>
+                        <h3 class="project-title">Usha Store</h3>
+                        <p class="project-desc">Full-stack e-commerce platform with secure auth, cart, favourites, and full mobile responsiveness.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_hey-developers-hope-you-gonna-make-your-activity-7409835234202120192-SeT6" target="_blank" class="project-card" data-reveal data-delay="350">
+                    <div class="project-card__img">
+                        <img src="resume.png" alt="Resume Builder">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-tag">Tool</span>
+                        <h3 class="project-title">Career Builder</h3>
+                        <p class="project-desc">ATS-friendly resume builder for fresh graduates — clean, structured, and recruiter-ready in minutes.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_webdevelopment-activity-7382818932988121089-Jg-m" target="_blank" class="project-card" data-reveal data-delay="400">
+                    <div class="project-card__img">
+                        <img src="chat.png" alt="Chat Burst">
+                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    </div>
+                    <div class="project-card__body">
+                        <span class="project-tag">Full Stack</span>
+                        <h3 class="project-title">Chat_Burst</h3>
+                        <p class="project-desc">Real-time chat app with React, Node.js, MongoDB &amp; Socket.IO — live read receipts and file sharing.</p>
+                    </div>
+                </a>
+
             </div>
         </section>
 
-
+        <!-- ═══ CONTACT ═══ -->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="description" id="description_id" cols="0" rows="10"
-                        class="contact__input"></textarea>
-
-                    <input type="button" value="Enviar" class="contact__button button">
-                </form>
+            <div class="section-header" data-reveal>
+                <span class="section-tag">05.</span>
+                <h2 class="section-title">Contact</h2>
             </div>
 
+            <div class="contact__container bd-grid">
+                <div class="contact__info" data-reveal>
+                    <h3 class="contact__heading">Let's Build Something <span class="accent">Together</span></h3>
+                    <p class="contact__sub">Whether you have a project in mind, a collaboration idea, or just want to say hello — my inbox is always open.</p>
+                    <div class="contact__links">
+                        <a href="/cdn-cgi/l/email-protection#691a0800191b08070c0c1d01290c11080419050c470a0604" class="contact-link">
+                            <i class="bx bx-envelope"></i>
+                            <span><span class="__cf_email__" data-cfemail="4330222a3331222d2626372b03263b222e332f266d202c2e">jupallisaipraneeth540@gmail.com</span></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="contact-link" target="_blank">
+                            <i class="bx bxl-linkedin"></i>
+                            <span>linkedin.com/in/saipraneeth</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contact-form" data-reveal data-delay="150">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-input" placeholder=" " required>
+                        <label for="name" class="form-label">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-input" placeholder=" " required>
+                        <label for="email" class="form-label">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class="form-input form-textarea" placeholder=" " rows="5" required></textarea>
+                        <label for="message" class="form-label">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span>Send Message</span>
+                        <i class="bx bx-send"></i>
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer__title">SaiPraneeth</p>
-
-        <div class="footer__social">
-            <a href="#" class="footer__icon"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="footer__icon"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="footer__icon"><i class="bx bxl-twitter"></i></a>
+        <div class="footer__inner">
+            <a href="#home" class="footer__logo">
+                <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
+            </a>
+            <p class="footer__copy">&copy; 2026 SaiPraneeth Jupalli. Crafted with passion.</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/JupalliSaiPraneeth" target="_blank" class="social-icon"><i class="bx bxl-github"></i></a>
+                <a href="https://www.instagram.com/devil_praneeth/" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+            </div>
         </div>
-        <p>&#169; 2025 copyright all right reserved.</p>
     </footer>
 
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+ </body>
+ </html>
