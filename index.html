@@ -3,421 +3,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaiPraneeth | Portfolio</title>
+    <meta name="description" content="SaiPraneeth Jupalli — Frontend Developer, Data Scientist & Web Designer. B.Tech 3rd year student building full-stack apps and data-driven solutions.">
+    <title>SaiPraneeth Jupalli | Portfolio</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Custom cursor -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
 
-    <!-- Noise overlay -->
-    <div class="noise-overlay"></div>
-
-    <!-- Header -->
+    <!-- ══════════ HEADER ══════════ -->
     <header class="l-header" id="header">
         <nav class="nav bd-grid">
-            <div class="nav__brand">
-                <a href="#home" class="nav__logo">
-                    <!-- <span class="logo-bracket"></span><span class="logo-bracket">PRANEETH</span> -->
-                </a>
-            </div>
 
-            <div class="nav__menu" id="nav-menu">
+            <a href="#home" class="nav__logo" aria-label="SaiPraneeth home">
+                <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Main navigation">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home"     class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about"    class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#Skills"   class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#contact"  class="nav__link">Contact</a></li>
+                    <li><a href="#home"     class="nav__link active">Home</a></li>
+                    <li><a href="#about"    class="nav__link">About</a></li>
+                    <li><a href="#skills"   class="nav__link">Skills</a></li>
+                    <li><a href="#projects" class="nav__link">Projects</a></li>
+                    <li><a href="#contact"  class="nav__link">Contact</a></li>
                 </ul>
             </div>
 
-            <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </nav>
     </header>
 
-    <!-- ═══ HOME ═══ -->
-    <main class="l-main">
-        <section class="home__page" id="home">
-            <!-- Background grid lines -->
-            <div class="home__bg-grid"></div>
+    <main>
+
+    <!-- ══════════ HOME ══════════ -->
+    <section class="home" id="home">
+        <div class="home__bg-grid" aria-hidden="true"></div>
+
+        <div class="home__content bd-grid">
 
             <div class="home__data" data-reveal>
-                <p class="home__greeting">Hey there , I'm</p>
+                <p class="home__greeting">Hey there 👋, I'm</p>
+
                 <h1 class="home__title">
-                    <span class="home__name" id="typed-name"></span><span class="typed-cursor-custom">|</span>
+                    <span class="home__name" id="typed-name" aria-label="SaiPraneeth"></span><span class="typed-cursor" aria-hidden="true">|</span>
                 </h1>
-                <div class="home__roles">
-                    <span class="role-static">I'm a&nbsp;</span>
-                    <div class="roles-wrapper">
-                        <span class="role-item" data-text="Full-stack Developer">Full-stack Developer</span>
-                        <span class="role-item" data-text="Data Scientist">Data Scientist</span>
-                        <span class="role-item" data-text="UI/UX Designer">UI/UX Designer</span>
+
+                <div class="home__roles" aria-label="Roles">
+                    <span class="role-static">I build as a&nbsp;</span>
+                    <div class="roles-wrapper" aria-live="polite">
+                        <span class="role-item">Frontend Developer</span>
+                        <span class="role-item">Data Scientist</span>
+                        <span class="role-item">Web Designer</span>
                     </div>
                 </div>
-                <p class="home__desc">Crafting immersive digital experiences with clean code &amp; creative thinking.</p>
 
-                <div class="home__actions">
+                <p class="home__desc">Crafting immersive digital experiences with clean code &amp; creative thinking. Passionate about turning complex problems into elegant solutions.</p>
+
+                <div class="home__cta">
                     <a href="#contact" class="btn btn--primary">
                         <span>Let's Talk</span>
-                        <i class="bx bx-send"></i>
+                        <i class="bx bx-send" aria-hidden="true"></i>
                     </a>
                     <a href="#projects" class="btn btn--ghost">
                         <span>View Work</span>
-                        <i class="bx bx-right-arrow-alt"></i>
+                        <i class="bx bx-chevron-right" aria-hidden="true"></i>
                     </a>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                         <i class="bx bxl-linkedin"></i>
                     </a>
-                    <a href="https://github.com/JupalliSaiPraneeth" class="social-icon" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/JupalliSaiPraneeth" class="social-link" target="_blank" rel="noopener" aria-label="GitHub profile">
                         <i class="bx bxl-github"></i>
                     </a>
-                    <a href="https://www.instagram.com/devil_praneeth/" class="social-icon" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/devil_praneeth/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram profile">
                         <i class="bx bxl-instagram"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="home__img" data-reveal data-delay="200">
-                <div class="img-ring">
+            <div class="home__visual" data-reveal data-delay="200">
+                <div class="img-ring" id="img-ring">
+                    <div class="img-ring__glow" aria-hidden="true"></div>
                     <div class="img-ring__inner">
-                        <img src="updated_bqtf5y_e_background_removal_f_png.png" alt="SaiPraneeth">
+                        <img src="updated_bqtf5y_e_background_removal_f_png.png" alt="Photo of SaiPraneeth" loading="eager">
                     </div>
-                    <div class="img-ring__orbit"></div>
-                    <div class="img-ring__dot"></div>
+                    <div class="img-ring__orbit" aria-hidden="true"></div>
+                    <div class="img-ring__dot" aria-hidden="true"></div>
+                </div>
+                <!-- Floating badges -->
+                <div class="float-badge float-badge--1" aria-hidden="true">
+                    <i class="bx bxl-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="float-badge float-badge--2" aria-hidden="true">
+                    <i class="bx bxl-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="float-badge float-badge--3" aria-hidden="true">
+                    <i class="bx bx-data"></i>
+                    <span>ML / AI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <span class="scroll-line"></span>
+            <span class="scroll-label">scroll</span>
+        </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section class="about section" id="about">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about__container bd-grid">
+            <div class="about__img-wrap" data-reveal>
+                <div class="about__img-frame">
+                    <img src="pt65.jpg" alt="SaiPraneeth at work" loading="lazy">
+                    <div class="about__img-border" aria-hidden="true"></div>
                 </div>
             </div>
 
-            <!-- Scroll indicator -->
-            <div class="scroll-indicator">
-                <span class="scroll-line"></span>
-                <span class="scroll-text">scroll</span>
-            </div>
-        </section>
+            <div class="about__content" data-reveal data-delay="100">
+                <span class="about__eyebrow">Who I am</span>
+                <h3 class="about__subtitle">SaiPraneeth <span class="accent">Jupalli</span></h3>
+                <p class="about__text">A passionate B.Tech 3rd-year student with a solid foundation in front-end web development and data science. I have hands-on experience with HTML, CSS, and Python, along with a strong understanding of data visualization and machine learning.</p>
+                <p class="about__text">Currently expanding my skill set by learning JavaScript and ReactJS to build dynamic and interactive web applications — focused on writing clean, scalable, production-ready code.</p>
 
-        <!-- ═══ ABOUT ═══ -->
-        <section class="about section" id="about">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">02.</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-
-            <div class="about__container bd-grid">
-                <div class="about__img-wrap" data-reveal>
-                    <div class="about__img-frame">
-                        <img src="pt65.jpg" alt="SaiPraneeth">
-                        <div class="about__img-deco"></div>
+                <div class="about__highlights">
+                    <div class="highlight-item">
+                        <i class="bx bx-check-circle"></i>
+                        <span>Full-stack web development</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bx bx-check-circle"></i>
+                        <span>Machine learning & data pipelines</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="bx bx-check-circle"></i>
+                        <span>UI/UX design thinking</span>
                     </div>
                 </div>
-                <div class="about__content" data-reveal data-delay="100">
-                    <h3 class="about__subtitle">I'm SaiPraneeth <span class="accent">Jupalli</span></h3>
-                    <p class="about__text">A passionate B.Tech 3rd-year student with a solid foundation in front-end web development and data science. I have hands-on experience with HTML, CSS, and Python, along with a strong understanding of data visualization and machine learning.</p>
-                    <p class="about__text">Currently expanding my skill set by learning JavaScript and ReactJS to build dynamic and interactive web applications.</p>
-                    <div class="about__stats">
-                        <div class="stat-card">
-                            <span class="stat-num">9+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-num">3rd</span>
-                            <span class="stat-label">B.Tech Year</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-num">2+</span>
-                            <span class="stat-label">Domains</span>
-                        </div>
+
+                <div class="about__stats">
+                    <div class="stat-card">
+                        <span class="stat-num">9</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">3</span>
+                        <span class="stat-suffix">rd</span>
+                        <span class="stat-label">B.Tech Year</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">2</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Domains</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ═══ SKILLS ═══ -->
-        <section class="skill section" id="Skills">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">03.</span>
-                <h2 class="section-title">Skills</h2>
-            </div>
+    <!-- ══════════ SKILLS ══════════ -->
+    <section class="skill section" id="skills">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Skills</h2>
+            <p class="section-sub">Technologies and tools I work with — organized by domain</p>
+        </div>
 
-            <div class="skills__container bd-grid">
-                <div class="skills__info" data-reveal>
-                    <h3 class="skills__subtitle">Professional Skills</h3>
-                    <p class="skills__text">From pixel-perfect frontends to intelligent data pipelines — here's what I bring to the table.</p>
+        <!-- ── Tab navigation ── -->
+        <div class="skills-tabs bd-grid" data-reveal>
+            <button class="tab-btn active" data-tab="frontend">
+                <i class="bx bx-code-alt"></i> Frontend
+            </button>
+            <button class="tab-btn" data-tab="backend">
+                <i class="bx bx-server"></i> Backend
+            </button>
+            <button class="tab-btn" data-tab="database">
+                <i class="bx bx-data"></i> Database
+            </button>
+            <button class="tab-btn" data-tab="devops">
+                <i class="bx bx-cog"></i> DevOps & Tools
+            </button>
+            <button class="tab-btn" data-tab="datascience">
+                <i class="bx bx-brain"></i> Data Science
+            </button>
+        </div>
+
+        <!-- ── FRONTEND ── -->
+        <div class="skills__panel active" id="tab-frontend">
+            <div class="skills__panel-inner bd-grid">
+                <div class="skills__desc" data-reveal>
+                    <h3 class="skills__cat-title">Frontend Development</h3>
+                    <p class="skills__cat-text">Building responsive, pixel-perfect interfaces using modern HTML/CSS/JS and component frameworks.</p>
+                    <div class="skills__tech-chips">
+                        <span class="tech-chip">HTML5</span>
+                        <span class="tech-chip">CSS3</span>
+                        <span class="tech-chip">JavaScript</span>
+                        <span class="tech-chip">ReactJS</span>
+                        <span class="tech-chip">TailwindCSS</span>
+                        <span class="tech-chip">Responsive Design</span>
+                        <span class="tech-chip">Animations</span>
+                        <span class="tech-chip">Figma</span>
+                    </div>
                 </div>
-
                 <div class="skills__bars" data-reveal data-delay="100">
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-html5"></i> HTML5</div>
-                            <span class="skill-pct">78%</span>
+                            <div class="skill-label"><i class="bx bxl-html5"></i> HTML5 &amp; Semantics</div>
+                            <span class="skill-pct">82%</span>
                         </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-css3"></i> CSS3</div>
+                            <div class="skill-label"><i class="bx bxl-css3"></i> CSS3 / TailwindCSS</div>
+                            <span class="skill-pct">70%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-javascript"></i> JavaScript (ES6+)</div>
+                            <span class="skill-pct">55%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-react"></i> ReactJS</div>
+                            <span class="skill-pct">45%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="45"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-palette"></i> UI/UX / Figma</div>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── BACKEND ── -->
+        <div class="skills__panel" id="tab-backend">
+            <div class="skills__panel-inner bd-grid">
+                <div class="skills__desc" data-reveal>
+                    <h3 class="skills__cat-title">Backend Development</h3>
+                    <p class="skills__cat-text">Building REST APIs, server-side logic, and real-time applications using Node.js and Python.</p>
+                    <div class="skills__tech-chips">
+                        <span class="tech-chip">Node.js</span>
+                        <span class="tech-chip">Express.js</span>
+                        <span class="tech-chip">Python</span>
+                        <span class="tech-chip">REST APIs</span>
+                        <span class="tech-chip">Socket.IO</span>
+                        <span class="tech-chip">JWT Auth</span>
+                        <span class="tech-chip">Bcrypt</span>
+                    </div>
+                </div>
+                <div class="skills__bars" data-reveal data-delay="100">
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-nodejs"></i> Node.js</div>
+                            <span class="skill-pct">55%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-code-block"></i> Express.js</div>
+                            <span class="skill-pct">52%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="52"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-python"></i> Python (OOP)</div>
+                            <span class="skill-pct">72%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-transfer"></i> REST APIs</div>
+                            <span class="skill-pct">62%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="62"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-wifi"></i> Socket.IO (Real-time)</div>
+                            <span class="skill-pct">50%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="50"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── DATABASE ── -->
+        <div class="skills__panel" id="tab-database">
+            <div class="skills__panel-inner bd-grid">
+                <div class="skills__desc" data-reveal>
+                    <h3 class="skills__cat-title">Database</h3>
+                    <p class="skills__cat-text">Designing schemas, writing queries, and working with both SQL and NoSQL databases.</p>
+                    <div class="skills__tech-chips">
+                        <span class="tech-chip">MongoDB</span>
+                        <span class="tech-chip">MySQL</span>
+                        <span class="tech-chip">PostgreSQL</span>
+                        <span class="tech-chip">Mongoose</span>
+                        <span class="tech-chip">SQL Queries</span>
+                        <span class="tech-chip">Data Modeling</span>
+                    </div>
+                </div>
+                <div class="skills__bars" data-reveal data-delay="100">
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-mongodb"></i> MongoDB</div>
+                            <span class="skill-pct">65%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-data"></i> MySQL</div>
+                            <span class="skill-pct">68%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="68"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-postgresql"></i> PostgreSQL</div>
+                            <span class="skill-pct">55%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-link"></i> Mongoose ODM</div>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── DEVOPS ── -->
+        <div class="skills__panel" id="tab-devops">
+            <div class="skills__panel-inner bd-grid">
+                <div class="skills__desc" data-reveal>
+                    <h3 class="skills__cat-title">DevOps &amp; Tools</h3>
+                    <p class="skills__cat-text">Version control, workflow automation, deployment, and developer tooling.</p>
+                    <div class="skills__tech-chips">
+                        <span class="tech-chip">Git</span>
+                        <span class="tech-chip">GitHub</span>
+                        <span class="tech-chip">VS Code</span>
+                        <span class="tech-chip">Postman</span>
+                        <span class="tech-chip">Linux CLI</span>
+                        <span class="tech-chip">npm / pip</span>
+                        <span class="tech-chip">Vercel</span>
+                    </div>
+                </div>
+                <div class="skills__bars" data-reveal data-delay="100">
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bxl-git"></i> Git &amp; GitHub</div>
+                            <span class="skill-pct">70%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-terminal"></i> Linux / CLI</div>
+                            <span class="skill-pct">55%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-fill" data-width="55"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-test-tube"></i> Postman / API Testing</div>
                             <span class="skill-pct">60%</span>
                         </div>
                         <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-javascript"></i> JavaScript</div>
-                            <span class="skill-pct">48%</span>
+                            <div class="skill-label"><i class="bx bx-cloud-upload"></i> Vercel / Netlify</div>
+                            <span class="skill-pct">50%</span>
                         </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="48"></div></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="50"></div></div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── DATA SCIENCE ── -->
+        <div class="skills__panel" id="tab-datascience">
+            <div class="skills__panel-inner bd-grid">
+                <div class="skills__desc" data-reveal>
+                    <h3 class="skills__cat-title">Data Science &amp; ML</h3>
+                    <p class="skills__cat-text">Exploratory data analysis, model building, and data visualization using Python's scientific stack.</p>
+                    <div class="skills__tech-chips">
+                        <span class="tech-chip">NumPy</span>
+                        <span class="tech-chip">Pandas</span>
+                        <span class="tech-chip">Scikit-learn</span>
+                        <span class="tech-chip">Matplotlib</span>
+                        <span class="tech-chip">Seaborn</span>
+                        <span class="tech-chip">Plotly</span>
+                        <span class="tech-chip">Clustering</span>
+                        <span class="tech-chip">Regression</span>
+                        <span class="tech-chip">KNN</span>
+                        <span class="tech-chip">Decision Trees</span>
+                    </div>
+                </div>
+                <div class="skills__bars" data-reveal data-delay="100">
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-python"></i> Python / ML</div>
-                            <span class="skill-pct">67%</span>
-                        </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="67"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bx-data"></i> Data Science</div>
+                            <div class="skill-label"><i class="bx bxl-python"></i> NumPy &amp; Pandas</div>
                             <span class="skill-pct">75%</span>
                         </div>
                         <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bx-palette"></i> UI/UX Design</div>
-                            <span class="skill-pct">58%</span>
+                            <div class="skill-label"><i class="bx bx-brain"></i> Scikit-learn (ML)</div>
+                            <span class="skill-pct">68%</span>
                         </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="58"></div></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="68"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-postgresql"></i> SQL / DB</div>
-                            <span class="skill-pct">71%</span>
+                            <div class="skill-label"><i class="bx bx-bar-chart-alt-2"></i> Data Visualization</div>
+                            <span class="skill-pct">78%</span>
                         </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="71"></div></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-meta">
-                            <div class="skill-label"><i class="bx bxl-github"></i> Git</div>
-                            <span class="skill-pct">54%</span>
+                            <div class="skill-label"><i class="bx bx-stats"></i> EDA &amp; Feature Eng.</div>
+                            <span class="skill-pct">70%</span>
                         </div>
-                        <div class="skill-track"><div class="skill-fill" data-width="54"></div></div>
+                        <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
                     </div>
-                </div>
-
-                <!-- Tech pills -->
-                <div class="skills__pills" data-reveal data-delay="200">
-                    <span class="pill">React</span>
-                    <span class="pill">Node.js</span>
-                    <span class="pill">Scikit-learn</span>
-                    <span class="pill">Pandas</span>
-                    <span class="pill">Matplotlib</span>
-                    <span class="pill">MongoDB</span>
-                    <span class="pill">Socket.IO</span>
-                    <span class="pill">Express</span>
-                    <span class="pill">Seaborn</span>
-                    <span class="pill">Plotly</span>
-                    <span class="pill">TailwindCSS</span>
-                    <span class="pill">NumPy</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ PROJECTS ═══ -->
-        <section class="projects section" id="projects">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">04.</span>
-                <h2 class="section-title">Projects</h2>
-            </div>
-
-            <div class="project__container bd-grid">
-
-                <a href="https://github.com/JupalliSaiPraneeth/-The-Art-of-Clustering-From-Chaos-to-Clarity-" target="_blank" class="project-card" data-reveal>
-                    <div class="project-card__img">
-                        <img src="clustering.jpeg" alt="Clustering">
-                        <div class="project-card__overlay">
-                            <i class="bx bx-link-external"></i>
+                    <div class="skill-item">
+                        <div class="skill-meta">
+                            <div class="skill-label"><i class="bx bx-sitemap"></i> Clustering / ARM</div>
+                            <span class="skill-pct">72%</span>
                         </div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Machine Learning</span>
-                        <h3 class="project-title">The Art of Clustering</h3>
-                        <p class="project-desc">Uncovering invisible patterns using unsupervised ML — clustering humans based on behavior without being told how.</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/JupalliSaiPraneeth/-Beyond-the-Basket-A-Deep-Dive-into-Association-Rule-Mining-" target="_blank" class="project-card" data-reveal data-delay="50">
-                    <div class="project-card__img">
-                        <img src="Association_rule_mining.jpg" alt="Association Rule Mining">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Data Mining</span>
-                        <h3 class="project-title">Beyond the Basket</h3>
-                        <p class="project-desc">Association Rule Mining for market basket analysis, recommender systems, and behavioral analytics.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7344949477444616192/" target="_blank" class="project-card" data-reveal data-delay="100">
-                    <div class="project-card__img">
-                        <img src="Screenshot 2025-06-29 101226.png" alt="Landing Page">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Frontend</span>
-                        <h3 class="project-title">My First Landing Page</h3>
-                        <p class="project-desc">A fully responsive and visually engaging landing page — from sketch to pixel-perfect HTML/CSS implementation.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356141841919946752/" target="_blank" class="project-card" data-reveal data-delay="150">
-                    <div class="project-card__img">
-                        <img src="Screenshot 2025-07-30 065259.png" alt="Mini Pro">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Animation</span>
-                        <h3 class="project-title">Mini Pro</h3>
-                        <p class="project-desc">Scroll animations with mini programs: Master Dice, Security-Pin, and Lucky-Shot bundled together.</p>
-                    </div>
-                </a>
-
-                <a href="https://lnkd.in/drwJieXU" target="_blank" class="project-card" data-reveal data-delay="200">
-                    <div class="project-card__img">
-                        <img src="manny.png" alt="Only Here">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Web Design</span>
-                        <h3 class="project-title">Only Here</h3>
-                        <p class="project-desc">A story website built for a writer friend — bridging storytelling and the web through thoughtful design.</p>
-                    </div>
-                </a>
-
-                <a href="https://lnkd.in/dFZgQ4Hu" target="_blank" class="project-card" data-reveal data-delay="250">
-                    <div class="project-card__img">
-                        <img src="fest.png" alt="Festival">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Frontend</span>
-                        <h3 class="project-title">MarKDowN FestivaL</h3>
-                        <p class="project-desc">A festive-themed webpage designed to attract holiday enthusiasts with vibrant, engaging visuals.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7374681733188800512/" target="_blank" class="project-card" data-reveal data-delay="300">
-                    <div class="project-card__img">
-                        <img src="mega.png" alt="Usha Store">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Full Stack</span>
-                        <h3 class="project-title">Usha Store</h3>
-                        <p class="project-desc">Full-stack e-commerce platform with secure auth, cart, favourites, and full mobile responsiveness.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_hey-developers-hope-you-gonna-make-your-activity-7409835234202120192-SeT6" target="_blank" class="project-card" data-reveal data-delay="350">
-                    <div class="project-card__img">
-                        <img src="resume.png" alt="Resume Builder">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Tool</span>
-                        <h3 class="project-title">Career Builder</h3>
-                        <p class="project-desc">ATS-friendly resume builder for fresh graduates — clean, structured, and recruiter-ready in minutes.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_webdevelopment-activity-7382818932988121089-Jg-m" target="_blank" class="project-card" data-reveal data-delay="400">
-                    <div class="project-card__img">
-                        <img src="chat.png" alt="Chat Burst">
-                        <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
-                    </div>
-                    <div class="project-card__body">
-                        <span class="project-tag">Full Stack</span>
-                        <h3 class="project-title">Chat_Burst</h3>
-                        <p class="project-desc">Real-time chat app with React, Node.js, MongoDB &amp; Socket.IO — live read receipts and file sharing.</p>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- ═══ CONTACT ═══ -->
-        <section class="contact section" id="contact">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">05.</span>
-                <h2 class="section-title">Contact</h2>
-            </div>
-
-            <div class="contact__container bd-grid">
-                <div class="contact__info" data-reveal>
-                    <h3 class="contact__heading">Let's Build Something <span class="accent">Together</span></h3>
-                    <p class="contact__sub">Whether you have a project in mind, a collaboration idea, or just want to say hello — my inbox is always open.</p>
-                    <div class="contact__links">
-                        <a href="/cdn-cgi/l/email-protection#691a0800191b08070c0c1d01290c11080419050c470a0604" class="contact-link">
-                            <i class="bx bx-envelope"></i>
-                            <span><span class="__cf_email__" data-cfemail="4330222a3331222d2626372b03263b222e332f266d202c2e">jupallisaipraneeth540@gmail.com</span></span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" class="contact-link" target="_blank">
-                            <i class="bx bxl-linkedin"></i>
-                            <span>linkedin.com/in/saipraneeth</span>
-                        </a>
+                        <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
                     </div>
                 </div>
-
-                <form class="contact__form" id="contact-form" data-reveal data-delay="150">
-                    <div class="form-group">
-                        <input type="text" id="name" class="form-input" placeholder=" " required>
-                        <label for="name" class="form-label">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" class="form-input" placeholder=" " required>
-                        <label for="email" class="form-label">Email Address</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" class="form-input form-textarea" placeholder=" " rows="5" required></textarea>
-                        <label for="message" class="form-label">Message</label>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">
-                        <span>Send Message</span>
-                        <i class="bx bx-send"></i>
-                    </button>
-                </form>
             </div>
-        </section>
+        </div>
+
+    </section>
+
+    <!-- ══════════ PROJECTS ══════════ -->
+    <section class="projects section" id="projects">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-sub">Real-world builds across web development and data science</p>
+        </div>
+
+        <div class="project__grid bd-grid">
+
+            <a href="https://github.com/JupalliSaiPraneeth/-The-Art-of-Clustering-From-Chaos-to-Clarity-" target="_blank" rel="noopener" class="project-card" data-reveal>
+                <div class="project-card__img">
+                    <img src="clustering.jpeg" alt="The Art of Clustering project" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">ML</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-title">The Art of Clustering</h3>
+                    <p class="project-desc">Uncovering invisible patterns using unsupervised ML — clustering humans based on behavior without being told how.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>Scikit-learn</span><span>Matplotlib</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/JupalliSaiPraneeth/-Beyond-the-Basket-A-Deep-Dive-into-Association-Rule-Mining-" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="60">
+                <div class="project-card__img">
+                    <img src="Association_rule_mining.jpg" alt="Association Rule Mining project" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">DS</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Data Mining</span>
+                    <h3 class="project-title">Beyond the Basket</h3>
+                    <p class="project-desc">Association Rule Mining for market basket analysis, recommender systems, and behavioral analytics.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>Pandas</span><span>Plotly</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/JupalliSaiPraneeth/Fast-and-Curious-A-Car-Price-ML-Model" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="90">
+                <div class="project-card__img">
+                    <img src="Linear-Regression-vs-Polynomial-Regression_new.jpg" alt="Fast and Curious Car Price ML Model" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">ML</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-title">Fast and Curious</h3>
+                    <p class="project-desc">Car price regression model — from cleaning data and handling outliers to feature relationships and evaluation.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/JupalliSaiPraneeth/-ClassiFi-A-Stylish-Dive-into-ML-Classification-Models-" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="120">
+                <div class="project-card__img">
+                    <img src="classification.png" alt="ClassiFi ML Classification Models" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">ML</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Machine Learning</span>
+                    <h3 class="project-title">ClassiFi</h3>
+                    <p class="project-desc">Hands-on comparison of core classification algorithms (KNN, Naive Bayes, SVM, Decision Trees, Random Forests) with consistent evaluation.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>Scikit-learn</span><span>NumPy</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7374681733188800512/" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="120">
+                <div class="project-card__img">
+                    <img src="mega.png" alt="Usha Store e-commerce" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FS</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Full Stack</span>
+                    <h3 class="project-title">Usha Store</h3>
+                    <p class="project-desc">Full-stack e-commerce platform with secure auth, cart, favourites, and full mobile responsiveness.</p>
+                    <div class="project-stack">
+                        <span>React</span><span>Node.js</span><span>MongoDB</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_webdevelopment-activity-7382818932988121089-Jg-m" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="180">
+                <div class="project-card__img">
+                    <img src="chat.png" alt="Chat Burst real-time app" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FS</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Full Stack</span>
+                    <h3 class="project-title">Chat_Burst</h3>
+                    <p class="project-desc">Real-time chat app with live read receipts and file sharing. Built on React, Node.js, MongoDB &amp; Socket.IO.</p>
+                    <div class="project-stack">
+                        <span>React</span><span>Socket.IO</span><span>Express</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/posts/saipraneeth-jupalli-6999432ba_hey-developers-hope-you-gonna-make-your-activity-7409835234202120192-SeT6" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="240">
+                <div class="project-card__img">
+                    <img src="resume.png" alt="Career Builder resume tool" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FE</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Tool</span>
+                    <h3 class="project-title">Career Builder</h3>
+                    <p class="project-desc">ATS-friendly resume builder for fresh graduates — clean, structured, and recruiter-ready in minutes.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://lnkd.in/drwJieXU" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="300">
+                <div class="project-card__img">
+                    <img src="manny.png" alt="Only Here story website" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FE</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Web Design</span>
+                    <h3 class="project-title">Only Here</h3>
+                    <p class="project-desc">Story website built for a writer friend — bridging storytelling and the web through thoughtful design.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7344949477444616192/" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="360">
+                <div class="project-card__img">
+                    <img src="Screenshot 2025-06-29 101226.png" alt="First Landing Page" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FE</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Frontend</span>
+                    <h3 class="project-title">My First Landing Page</h3>
+                    <p class="project-desc">A fully responsive and visually engaging landing page — from sketch to pixel-perfect implementation.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://lnkd.in/dFZgQ4Hu" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="420">
+                <div class="project-card__img">
+                    <img src="fest.png" alt="MarKDowN FestivaL" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FE</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Frontend</span>
+                    <h3 class="project-title">MarKDowN FestivaL</h3>
+                    <p class="project-desc">A festive-themed webpage attracting holiday enthusiasts with vibrant, engaging visuals and animations.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356141841919946752/" target="_blank" rel="noopener" class="project-card" data-reveal data-delay="480">
+                <div class="project-card__img">
+                    <img src="Screenshot 2025-07-30 065259.png" alt="Mini Pro" loading="lazy">
+                    <div class="project-card__overlay"><i class="bx bx-link-external"></i></div>
+                    <span class="project-badge">FE</span>
+                </div>
+                <div class="project-card__body">
+                    <span class="project-tag">Animation</span>
+                    <h3 class="project-title">Mini Pro</h3>
+                    <p class="project-desc">Scroll animations showcase bundled with mini games: Master Dice, Security-Pin, and Lucky-Shot.</p>
+                    <div class="project-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="contact section" id="contact">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-sub">Have a project in mind? Let's collaborate and build something great.</p>
+        </div>
+
+        <div class="contact__container bd-grid">
+            <div class="contact__info" data-reveal>
+                <h3 class="contact__heading">Let's Build Something <span class="accent">Together</span></h3>
+                <p class="contact__sub">Whether it's a project, freelance work, internship opportunity, or just a hello — reach out anytime. I'll get back within 24 hours.</p>
+
+                <div class="contact__cards">
+                    <a href="mailto:jupallisaipraneeth@gmail.com" class="contact-card">
+                        <div class="contact-card__icon"><i class="bx bx-envelope"></i></div>
+                        <div>
+                            <span class="contact-card__label">Email</span>
+                            <span class="contact-card__value">jupallisaipraneeth@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card__icon"><i class="bx bxl-linkedin"></i></div>
+                        <div>
+                            <span class="contact-card__label">LinkedIn</span>
+                            <span class="contact-card__value">saipraneeth-jupalli</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/JupalliSaiPraneeth" target="_blank" rel="noopener" class="contact-card">
+                        <div class="contact-card__icon"><i class="bx bxl-github"></i></div>
+                        <div>
+                            <span class="contact-card__label">GitHub</span>
+                            <span class="contact-card__value">JupalliSaiPraneeth</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact__form" id="contact-form" data-reveal data-delay="150" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="c-name" class="form-label">Your Name <span class="req">*</span></label>
+                        <input type="text"  id="c-name"  name="name"  class="form-input" placeholder="John Doe" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email" class="form-label">Email <span class="req">*</span></label>
+                        <input type="email" id="c-email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="c-subject" class="form-label">Subject</label>
+                    <input type="text" id="c-subject" name="subject" class="form-input" placeholder="Project collaboration / Freelance / Say hi">
+                </div>
+                <div class="form-group">
+                    <label for="c-message" class="form-label">Message <span class="req">*</span></label>
+                    <textarea id="c-message" name="message" class="form-input form-textarea" placeholder="Tell me about your project or idea..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">
+                    <span>Send Message</span>
+                    <i class="bx bx-send"></i>
+                </button>
+                <p class="form-note">I'll respond within 24 hours ⚡</p>
+            </form>
+        </div>
+    </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- ══════════ FOOTER ══════════ -->
     <footer class="footer">
-        <div class="footer__inner">
+        <div class="footer__inner bd-grid">
             <a href="#home" class="footer__logo">
                 <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
             </a>
-            <p class="footer__copy">&copy; 2026 SaiPraneeth Jupalli. Crafted with passion.</p>
+            <p class="footer__copy">&copy; 2026 SaiPraneeth Jupalli &mdash; Crafted with passion &amp; coffee ☕</p>
             <div class="footer__social">
-                <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/JupalliSaiPraneeth" target="_blank" class="social-icon"><i class="bx bxl-github"></i></a>
-                <a href="https://www.instagram.com/devil_praneeth/" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/saipraneeth-jupalli-6999432ba/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/JupalliSaiPraneeth" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://www.instagram.com/devil_praneeth/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
             </div>
+        </div>
+        <div class="footer__back">
+            <a href="#home" class="back-to-top" aria-label="Back to top">
+                <i class="bx bx-up-arrow-alt"></i>
+            </a>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js" defer></script>
- </body>
- </html>
+    <script src="script.js"></script>
+</body>
+</html>
